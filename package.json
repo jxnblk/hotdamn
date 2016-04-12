@@ -1,6 +1,6 @@
 {
   "name": "hotdamn",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Zero-configuration webpack CLI with support for ES2015, React, and more",
   "bin": {
     "hotdamn": "./bin/hotdamn.js"
