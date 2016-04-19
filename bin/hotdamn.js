@@ -92,7 +92,7 @@ if (program.args.length) {
     )
     config.output = {
       path: dir,
-      filename: 'dev.js'
+      filename: 'bundle.js'
     }
 
     config.plugins = [
@@ -101,9 +101,9 @@ if (program.args.length) {
 
     new WebpackDevServer(webpack(config), {
       hot: true,
-      historyApiFallback: {
-        index: program.index || '/index.html'
-      }
+      historyApiFallback: program.index ? {
+        index: program.index
+      } : false
     }).listen(8080, 'localhost', function (err, result) {
       if (err) {
         console.error(err)
