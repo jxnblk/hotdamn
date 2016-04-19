@@ -9,12 +9,24 @@ Zero-configuration webpack CLI with support for ES2015, React, HMR, and loaders 
 ### 1. Install
 
 ```
-npm i hotdamn
+npm i -D hotdamn
 ```
 
-For general command line use, install with the `-g` flag. For use within a package, install as a dev dependency with the `-D` flag. **Note: There's no need to install React, webpack, or Babel**
+For use within a package, install as a dev dependency with the `-D` flag.
+**Note: There's no need to install React, webpack, or Babel when using npm 3.**
 
-### 2. Create entry
+### 2. Add run scripts
+
+Add run scripts to your `package.json`. The dev flag runs webpack-dev-server.
+
+```json
+"scripts": {
+  "start": "hotdamn entry.js --dev",
+  "build": "hotdamn entry.js"
+}
+```
+
+### 3. Create entry file
 
 Create an `entry.js` file.
 
@@ -36,10 +48,11 @@ class App extends React.Component {
 ReactDOM.render(<App />, div)
 ```
 
-### 3. Run
+### 4. Run
 
-Run `hotdamn entry.js` to compile to `bundle.js`.
-**For the dev server:** Run `hotdamn entry.js --dev`.
+```
+npm start
+```
 
 ## Options
 
