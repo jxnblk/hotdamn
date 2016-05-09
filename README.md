@@ -39,9 +39,11 @@ const div = document.getElementById('app')
 
 class App extends React.Component {
   render () {
-    <div>
-      <h1>Hotdamn!</h1>
-    </div>
+    return (
+      <div>
+        <h1>Hotdamn!</h1>
+      </div>
+    )
   }
 }
 
