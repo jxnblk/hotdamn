@@ -26,7 +26,23 @@ Add run scripts to your `package.json`. The dev flag runs webpack-dev-server.
 }
 ```
 
-### 3. Create entry file
+### 3. Create entry/index files
+
+Create an `index.html` file.
+
+**Example:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="bundle.js"></script>
+  </body>
+</html>
+```
 
 Create an `entry.js` file.
 
